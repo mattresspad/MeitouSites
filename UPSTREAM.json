@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/VlcekM/MeitouClient",
+  "branch": "master",
+  "commit": "026b94fb15ad1059aa91db3a0f2fa01fb7258397",
+  "paths": [
+    "site",
+    "bench",
+    "LICENSE",
+    "LICENSE-EXCEPTION.md",
+    "THIRD_PARTY_NOTICES.md",
+    ".gitattributes",
+    ".github/workflows/site-check.yml"
+  ],
+  "filtered_history_tip": "867805e9726e2d9eb967668dda6673c135cb545c",
+  "benchmark_snapshot": {
+    "path": "site/public/bench/bench.json",
+    "source_commit": "026b94fb15ad1059aa91db3a0f2fa01fb7258397",
+    "sha256": "364cc579633886ea091c52d5f243453e210018f5ffebe5f58b5e2e52526ccfb8"
+  }
+}

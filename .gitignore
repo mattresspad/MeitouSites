@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+_local/
+.env
+.env.*
+*.log
+__pycache__/

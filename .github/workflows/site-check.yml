@@ -1,12 +1,16 @@
-# Site check: builds site/ on pull requests that touch it (the image build runs only on master), so a broken page shows before merge.
 name: Site check
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/site-check.yml"
   pull_request:
     paths:
       - "site/**"
-      - "bench/**"
       - ".github/workflows/site-check.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,10 +24,11 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-node@v5
         with:
           node-version: 24
-      - run: python3 ../bench/tools/generate.py --out public/bench/bench.json
+          cache: npm
+          cache-dependency-path: site/package-lock.json
       - run: npm ci
       - run: npm run build
