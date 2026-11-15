@@ -8,7 +8,7 @@ Extracted from VlcekM/MeitouClient master at `026b94fb15ad1059aa91db3a0f2fa01fb7
 
 The initial extraction retained the upstream website, routes, media, download destinations, canonical site URL, and design. Extraction changes were limited to this repository's documentation, build check, ignore rules, and committed benchmark snapshot. Later website improvements are maintained in separate feature commits. See [UPSTREAM.json](UPSTREAM.json) for the extraction's provenance and checksums.
 
-- `site/`: Astro website, including homepage, benchmarks, roadmap, and client build instructions.
+- `site/`: Astro website, including homepage, community mod directory, benchmarks, roadmap, and client build instructions.
 - `bench/`: upstream benchmark data, generator, and contribution/measurement tooling. The client engine is not included.
 - `site/public/bench/bench.json`: generated upstream benchmark snapshot, committed so this site builds independently.
 
@@ -31,6 +31,21 @@ docker run --rm -p 8080:80 meitou-sites
 ```
 
 GitHub Actions builds on main and relevant pull requests. It does not publish an image, call an upstream webhook, or deploy a site. Make subsequent website changes in branches and open pull requests against this repository's main branch.
+
+## Community mod directory
+
+The `/mods/` page is built from two committed files:
+
+- `site/src/data/mods.json`: curated names, authors, descriptions, Workshop IDs, and additional source links.
+- `site/src/data/workshop.json`: cached Workshop titles and thumbnail URLs for those IDs.
+
+After adding or changing Workshop IDs, refresh the snapshot manually:
+
+```sh
+npm --prefix site run refresh:workshop
+```
+
+The refresh contacts Steam's public API and replaces the snapshot only after validating the complete response. It does not replace the editorial descriptions. Ordinary builds use the committed data without calling Steam; visitors' browsers load the thumbnail images from Steam's image servers. The directory and code-mod guide remain readable with JavaScript disabled or images unavailable.
 
 ## Refresh benchmark data
 
