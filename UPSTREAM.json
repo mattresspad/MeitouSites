@@ -15,6 +15,6 @@
   "benchmark_snapshot": {
     "path": "site/public/bench/bench.json",
     "source_commit": "026b94fb15ad1059aa91db3a0f2fa01fb7258397",
-    "sha256": "364cc579633886ea091c52d5f243453e210018f5ffebe5f58b5e2e52526ccfb8"
+    "sha256": "eaec505374d83716acd45dac9095b9f0377556cf6e30934137ba6dde2f4aee1e"
   }
 }

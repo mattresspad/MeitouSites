@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "UPSTREAM.json"
       - ".github/workflows/site-check.yml"
   pull_request:
     paths:
       - "site/**"
+      - "UPSTREAM.json"
       - ".github/workflows/site-check.yml"
   workflow_dispatch:
 

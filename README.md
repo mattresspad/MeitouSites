@@ -40,7 +40,7 @@ Ordinary development and builds use the committed snapshot. The upstream generat
 python bench/tools/generate.py --repo /path/to/MeitouClient --ref UPSTREAM_COMMIT --out site/public/bench/bench.json
 ```
 
-Update the benchmark source files from that same upstream revision, regenerate the snapshot, and update its source commit and SHA-256 in `UPSTREAM.json` together. The baseline snapshot was generated from the exact upstream commit above.
+Update the benchmark source files from that same upstream revision, regenerate the snapshot with LF line endings, and update its source commit and SHA-256 in `UPSTREAM.json` together. The baseline snapshot was generated from the exact upstream commit above.
 
 ## Credits and license
 
