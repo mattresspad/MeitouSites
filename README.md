@@ -6,7 +6,7 @@ An independent extraction of the [MeitouClient website](https://github.com/Vlcek
 
 Extracted from VlcekM/MeitouClient master at `026b94fb15ad1059aa91db3a0f2fa01fb7258397`. Git history is filtered to the website, benchmark sources, site build check, and license files, retaining original authors, dates, and messages. Commit IDs change when their trees and parent history are filtered.
 
-The website source, routes, media, download destinations, canonical site URL, and design retain the upstream baseline. The earlier presentation and mod-directory changes are not applied here. Extraction changes are limited to this repository's documentation, build check, ignore rules, and committed benchmark snapshot. See [UPSTREAM.json](UPSTREAM.json) for provenance and checksums.
+The initial extraction retained the upstream website, routes, media, download destinations, canonical site URL, and design. Extraction changes were limited to this repository's documentation, build check, ignore rules, and committed benchmark snapshot. Later website improvements are maintained in separate feature commits. See [UPSTREAM.json](UPSTREAM.json) for the extraction's provenance and checksums.
 
 - `site/`: Astro website, including homepage, benchmarks, roadmap, and client build instructions.
 - `bench/`: upstream benchmark data, generator, and contribution/measurement tooling. The client engine is not included.
