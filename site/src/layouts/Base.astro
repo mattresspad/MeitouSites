@@ -43,7 +43,7 @@ const { title, description = 'MeitouClient: a .NET reimplementation of the Kensh
       <header id="top" tabindex="-1" class:list={['top', { 'is-over': video }]}>
         {!video && <Wordmark class="brand" />}
         <nav class="site-links" aria-label="Site navigation">
-          <a class="mt-link-button" href="/roadmap">Roadmap</a>
+          <a class="mt-link-button" href="/mods/" aria-current={Astro.url.pathname.replace(/\/$/, '') === '/mods' ? 'page' : undefined}>Mods</a>
           <a class="mt-link-button" href="/benchmarks">Benchmarks</a>
           <a class="mt-link-button" href="https://discord.gg/DVAHH2n9DR"><DiscordIcon /> Discord</a>
           <a class="mt-link-button" href="https://github.com/VlcekM/MeitouClient"><GithubIcon /> GitHub</a>
